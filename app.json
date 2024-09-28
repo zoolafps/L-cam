@@ -1,0 +1,40 @@
+{
+  "expo": {
+    "name": "LCam",
+    "slug": "lcam",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon-app-lcam.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/icon-app-lcam.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/icon-app-lcam.png",
+        "backgroundColor": "#ffffff"
+      },
+      "permissions": [
+        "WRITE_EXTERNAL_STORAGE",
+        "READ_EXTERNAL_STORAGE",
+        "BLUETOOTH",
+        "BLUETOOTH_ADMIN",
+        "ACCESS_FINE_LOCATION"
+      ],
+      "package": "com.anonymous.lcam"
+    },
+    "web": {
+      "favicon": "./assets/icon-app-lcam.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "8375a6fc-988d-498a-8a7d-b9bcb3d3ed3e"
+      }
+    }
+  }
+}
