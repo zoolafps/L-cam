@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Image, StyleSheet } from 'react-native';
-import LcamIcon from '../assets/LCam-logo.png';
+import LcamIcon from '../../assets/LCam-logo.png';
 
 const LoadingScreen = () => {
   return (

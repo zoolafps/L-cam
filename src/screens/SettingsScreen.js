@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, Image, StyleSheet, Switch, FlatList, TouchableOpacity } from 'react-native';
-import backgroundImage from '../assets/Bg.jpg'; // Asegúrate de que la ruta sea correcta
+import backgroundImage from '../../assets/Bg.jpg'; // Asegúrate de que la ruta sea correcta
 
 const options = [
   { id: '1', name: 'Notificaciones', screen: 'NotificationsSettings' },
