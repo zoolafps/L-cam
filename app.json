@@ -12,7 +12,10 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "runtimeVersion": {
+        "policy": "appVersion"
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -26,7 +29,8 @@
         "BLUETOOTH_ADMIN",
         "ACCESS_FINE_LOCATION"
       ],
-      "package": "com.anonymous.lcam"
+      "package": "com.anonymous.lcam",
+      "runtimeVersion": "1.0.0"
     },
     "web": {
       "favicon": "./assets/icon-app-lcam.png"
@@ -35,6 +39,9 @@
       "eas": {
         "projectId": "8375a6fc-988d-498a-8a7d-b9bcb3d3ed3e"
       }
+    },
+    "updates": {
+      "url": "https://u.expo.dev/8375a6fc-988d-498a-8a7d-b9bcb3d3ed3e"
     }
   }
 }

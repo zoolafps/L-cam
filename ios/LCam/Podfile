@@ -1,0 +1,9 @@
+platform :ios, '11.0'
+
+target 'LCam' do
+  # Pods para TuNombreDeAplicacion
+  pod 'react-native-fs', :path => '../node_modules/react-native-fs'
+
+  # Otras dependencias
+  pod 'RNPermissions', :path => '../node_modules/react-native-permissions'
+end

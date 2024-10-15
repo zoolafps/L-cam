@@ -1,4 +1,4 @@
-package com.anonymous.lcam
+package com.lcam // Cambiado a com.lcam
 
 import android.app.Application
 import android.content.res.Configuration
@@ -23,7 +23,10 @@ class MainApplication : Application(), ReactApplication {
           override fun getPackages(): List<ReactPackage> {
             // Packages that cannot be autolinked yet can be added manually here, for example:
             // packages.add(new MyReactNativePackage());
-            return PackageList(this).packages
+            val packages = PackageList(this).packages
+            // Asegúrate de incluir el paquete react-native-fs
+            packages.add(RNFSPackage()) // Asegúrate de haber importado esto correctamente
+            return packages
           }
 
           override fun getJSMainModuleName(): String = ".expo/.virtual-metro-entry"

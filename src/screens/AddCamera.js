@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import { View, Text, Button, FlatList, TouchableOpacity, StyleSheet, Alert, PermissionsAndroid, Platform } from 'react-native';
 import { NativeEventEmitter } from 'react-native';
-import RNFS from 'react-native-fs';
+import * as FileSystem from 'expo-file-system';
 
 const AddCamera = ({ manager }) => {
   const [devices, setDevices] = useState([]);
@@ -46,7 +46,7 @@ const AddCamera = ({ manager }) => {
       Alert.alert('Permisos denegados', 'Necesitas conceder permisos para usar esta función.');
       return;
     }
-    
+
     setDevices([]);
     if (manager) {
       manager.scan([], 5, true)
@@ -62,9 +62,9 @@ const AddCamera = ({ manager }) => {
   };
 
   const saveConfigToFile = async (config) => {
-    const path = `${RNFS.DocumentDirectoryPath}/configDevice.json`;
+    const path = `${FileSystem.documentDirectory}configDevice.json`;
     try {
-      await RNFS.writeFile(path, JSON.stringify(config), 'utf8');
+      await FileSystem.writeAsStringAsync(path, JSON.stringify(config));
       console.log('Archivo guardado en:', path);
       Alert.alert('Archivo guardado', `Configuración guardada en: ${path}`);
     } catch (error) {

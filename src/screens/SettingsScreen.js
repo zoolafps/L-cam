@@ -31,12 +31,14 @@ const SettingsScreen = ({ navigation }) => {
       />
       <View style={styles.overlay}>
         <View style={styles.themeOption}>
-        <Text style={styles.title}>Modo Oscuro</Text>
-        <Switch
-          value={isDarkMode}
-          onValueChange={toggleSwitch}
-          style={styles.switch}
-        />
+          <Text style={styles.title}>Modo Oscuro</Text>
+          <Switch
+            value={isDarkMode}
+            onValueChange={toggleSwitch}
+            trackColor={{ false: '#767577', true: '#81b0ff' }}
+            thumbColor={isDarkMode ? '#f5dd4b' : '#f4f3f4'}
+            style={styles.switch}
+          />
         </View>
         <View style={styles.gridContainer}>
           <FlatList
@@ -66,9 +68,7 @@ const styles = StyleSheet.create({
   },
   overlay: {
     flex: 1,
-    flexWrap: 'wrap',
     justifyContent: 'flex-start',
-    alignContent: 'flex-start',
     alignItems: 'center',
     backgroundColor: 'rgba(255, 255, 255, 0.4)',
     paddingTop: '50%',
@@ -88,26 +88,25 @@ const styles = StyleSheet.create({
   },
   switch: {
     height: 30,
-    width: 30,
+    width: 50, // Aumentado para mejor visualización
   },
   gridContainer: {
     marginTop: 50,
     width: '90%',
-    height: '50%',
     flex: 2,
-    gap: 20,
     justifyContent: 'space-between',
-    alignContent: 'space-between',
   },
   optionList: {
-    
-
+    flexGrow: 1,
   },
   optionItem: {
     width: '45%',
     height: 200,
-    backgroundColor:'#ededed',
+    backgroundColor: '#ededed',
     padding: 10,
+    borderRadius: 10, // Añadido para un mejor diseño
+    alignItems: 'center', // Centramos el texto
+    justifyContent: 'center',
   },
   optionText: {
     fontSize: 18,
